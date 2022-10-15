@@ -1,6 +1,8 @@
 # Appium Code Snippet
 
-Sample Appium Code for Android
+**Sample Appium Code for Android**
+
+```java 
 
 public class AndroidCalcAppExample {
 	WebDriver driver;
@@ -22,9 +24,11 @@ capabilities.setCapability("udid", "emulator-5554");
 	}
 }
 
+```
 
+**Sample Appium Code for iOS**
 
-Sample Appium Code for iOS
+```java 
 
 public class iOSCalcAppExample {
 	WebDriver driver;
@@ -46,7 +50,7 @@ public class iOSCalcAppExample {
 	}
 }
 
-
+```
 
 
 
