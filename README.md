@@ -54,7 +54,9 @@ public class iOSCalcAppExample {
 
 
 
-Q: Capabilities for Android
+**Capabilities for Android**
+
+```java 
 
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("deviceName", "8d75c47d");
@@ -64,8 +66,11 @@ capabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
 capabilities.setCapability("udid", "emulator-5554");
 capabilities.setCapability("platformVersion", "11.0");
 
+```
 		
-Q: Capabilities for iOS
+**Capabilities for iOS**
+
+```java 
 
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("deviceName", "8d75c47d");
@@ -75,9 +80,11 @@ capabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
 capabilities.setCapability("udid", "emulator-5554");
 capabilities.setCapability("platformVersion", "11.0");
 
+```
 
+**Tap By Element**
 
-Q: Tap By Element
+```java
 
 MobileElement element= driver.findElementByAccessibilityId("Login Screen");
 TouchAction action = new TouchAction(driver);
@@ -87,19 +94,23 @@ action
 	.waitAction(waitOptions(ofMillis(250)))
 	.perform();
 	
+```  
   
-  
-Q: Tap by coordinates
-    
+**Tap by coordinates**
+
+```java
+
 TouchAction action = new TouchAction(driver);
 action
 	.tap(point(100,200))
 	.waitAction(waitOptions(ofMillis(250)))
 	.perform();
 	
+```  
   
-  
-Q: Perform Single Tap
+**Perform Single Tap**
+
+```java
 
 MobileElement element= driver.findElementByAccessibilityId("Login Screen");
 TouchActions action = new TouchActions(driver);
@@ -107,9 +118,11 @@ action
 	.singleTap(element)
 	.perform();
 
+```
 
+**Perform Double Tap**
 
-Q: Perform Double Tap
+```java
 
 MobileElement element= driver.findElementByAccessibilityId("Login Screen");
 TouchActions action = new TouchActions(driver);
@@ -117,9 +130,11 @@ action
 	.doubleTap(element)
 	.perform();
 
+```
 
+**Perform touch sequence from one element to another element**
 
-Q: Perform touch sequence from one element to another element	
+```java
 
 MobileElement element1= driver.findElementByAccessibilityId("Login Screen");
 MobileElement element2= driver.findElementByAccessibilityId("Home Screen");
@@ -129,9 +144,11 @@ TouchAction action = new TouchAction(driver);
 	action.release();
 	action.perform();
 
+```
 
+**Perform multi touch sequence containing different elements**
 
-Q: Perform multi touch sequence containing different elements
+```java
 
 MobileElement element1= driver.findElementByAccessibilityId("Login Screen");
 MobileElement element2= driver.findElementByAccessibilityId("Home Screen");
@@ -153,11 +170,15 @@ action.add(actionOne);
 action.add(actionTwo);
 action.perform();
 
+```
 
+**hide the keyboard in Appium**
 
-Q: How to hide the keyboard in Appium?
+```java
+
 driver.hideKeyboard();
 
+```
 
 
 Q: Is there any EventListeners in Appium?
