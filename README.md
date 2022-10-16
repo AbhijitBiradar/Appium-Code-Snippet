@@ -435,26 +435,27 @@ public void swipeByElements (AndroidElement startElement, AndroidElement endElem
 ```		
 
 
+**Status**
 
+```java 
 
-
-
-
-
-Appium Code Snippet
-
-1) Status
-	Retrieve the server’s current status
-	driver.getStatus();
+Retrieve the server’s current status
+driver.getStatus();
 	
-	Reference: https://appium.io/docs/en/commands/status/index.html
---------------------------------------------------------------------------------------------------------------------------------
+Reference: https://appium.io/docs/en/commands/status/index.html
 	
-2) Execute Mobile Command
-	Execute a native mobile command
-	driver.executeScript("mobile: scroll", ImmutableMap.of("direction", "down"));
+```	
 	
-	Reference: https://appium.io/docs/en/commands/mobile-command/index.html
+**Execute Mobile Command**
+
+```java 
+
+Execute a native mobile command
+driver.executeScript("mobile: scroll", ImmutableMap.of("direction", "down"));
+	
+Reference: https://appium.io/docs/en/commands/mobile-command/index.html
+	
+```	
 	
 --------------------------------------------------------------------------------------------------------------------------------
 3) Session related commands
