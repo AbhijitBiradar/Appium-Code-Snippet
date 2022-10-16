@@ -181,10 +181,10 @@ driver.hideKeyboard();
 ```
 
 
-Q: Is there any EventListeners in Appium?
-Ans: yes, you can use AppiumWebDriverEventListener . You need to implement this interface.
 
-Example:
+**AppiumWebDriverEventListener interface**
+
+```java 
 
 public class AppiumListener implements AppiumWebDriverEventListener {
 	public void beforeChangeValueOf(WebElement webElement, WebDriver webDriver) {
@@ -283,9 +283,13 @@ public class AppiumListener implements AppiumWebDriverEventListener {
 	}
 }
 
+```
 
 
-Q: Press by element
+**Press by element**
+
+```java 
+
 TouchAction action = new TouchAction(driver);
 action.
 	.press(element(element))
@@ -293,10 +297,13 @@ action.
 	.release()
 	.perform();
 
+```
 
 
+**Press by coordinates**
 
-Q: Press by coordinates
+```java 
+
 TouchAction action = new TouchAction(driver);
 action. 
 	.press(point(x,y))
@@ -304,10 +311,13 @@ action.
 	.release()
 	.perform();
 
+```
 
 
+**Multitouch action by using an android element**
 
-Q: Multitouch action by using an android element
+```java 
+
 TouchAction action = new TouchAction(driver)
 action. 
 	.press(element(androidElement))
@@ -319,9 +329,11 @@ multiAction.
 	.add(press)
 	.perform();
 
+```
 
+**TouchActions using Screen Coordinates**
 
-Q: TouchActions using Screen Coordinates
+```java 
 
 MobileElement topCharts = driver.findElement(MobileBy.xpath("//android.widget.TextView[@text = 'Top Charts']"));
 Point point = topCharts.getLocation();
@@ -342,23 +354,36 @@ Actions
 For More Info Refer this:
 https://www.automationtestinghub.com/appium-scroll-examples/
 
+```
 
-Swipe By Co-ordinates
+**Swipe By Co-ordinates**
+
+```java 
+
 int starty = (int) (size.width * 0.90);
 int endx = (int) (size.width * 0.20);
 int startx = size.width / 2;
 driver.swipe(endx, starty, startx, starty, 1000);  // Swipe from Left to Right.
 Thread.sleep(2000);
 	
-		
-Swipe From Element:
+```
+
+**Swipe From Element:**
+
+```java 
+
 MobileElement element = (MobileElement)driver.findElement(By.xpath("//xpath"));
 element.swipe(SwipeElementDirection.DOWN, 1000);	
 		
 MobileElement element = (MobileElement)driver.findElement(By.xpath("//xpath"));
 element.swipe(SwipeElementDirection.UP, 1000);	
 
-//Horizontal Swipe by percentages
+```
+
+**Horizontal Swipe by percentages**
+
+```java 
+
 public void horizontalSwipeByPercentage (double startPercentage, double endPercentage, double anchorPercentage) {
 	Dimension size = driver.manage().window().getSize();
 	int anchor = (int) (size.height * anchorPercentage);
@@ -371,9 +396,13 @@ public void horizontalSwipeByPercentage (double startPercentage, double endPerce
 		.release().perform();
 }
 
+```
 
 
-Q: Vertical Swipe by percentages
+**Vertical Swipe by percentages**
+
+```java 
+
 public void verticalSwipeByPercentages(double startPercentage, double endPercentage, double anchorPercentage) {
 	Dimension size = driver.manage().window().getSize();
 	int anchor = (int) (size.width * anchorPercentage);
@@ -386,8 +415,11 @@ public void verticalSwipeByPercentages(double startPercentage, double endPercent
 		.release().perform();
 }
 
+```
 
-Q: Swipe by elements
+**Swipe by elements**
+
+```java 
 public void swipeByElements (AndroidElement startElement, AndroidElement endElement) {
 	int startX = startElement.getLocation().getX() + (startElement.getSize().getWidth() / 2);
 	int startY = startElement.getLocation().getY() + (startElement.getSize().getHeight() / 2);
@@ -400,4 +432,4 @@ public void swipeByElements (AndroidElement startElement, AndroidElement endElem
 		.release().perform();
 }
     
-		
+```		
