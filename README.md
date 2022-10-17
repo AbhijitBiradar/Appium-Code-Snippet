@@ -456,31 +456,39 @@ driver.executeScript("mobile: scroll", ImmutableMap.of("direction", "down"));
 Reference: https://appium.io/docs/en/commands/mobile-command/index.html
 	
 ```	
-	
---------------------------------------------------------------------------------------------------------------------------------
-3) Session related commands
 
-Create New Session
-	Create a new session
-	
-	DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-	desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.3");
-	desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone Simulator");
-	desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-	desiredCapabilities.setCapability(MobileCapabilityType.APP, "/path/to/ios/app.zip");
 
-	URL url = new URL("http://127.0.0.1:4723/wd/hub");
+# Session related commands
 
-	IOSDriver driver = new IOSDriver(url, desiredCapabilities);
-	String sessionId = driver.getSessionId().toString();
+**Create a new session**
 	
-	Reference:  https://appium.io/docs/en/commands/session/create/index.html
+```java 
+	
+DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.3");
+desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone Simulator");
+desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+desiredCapabilities.setCapability(MobileCapabilityType.APP, "/path/to/ios/app.zip");
 
-End Session
-	End the running session
-	driver.quit();
+URL url = new URL("http://127.0.0.1:4723/wd/hub");
+
+IOSDriver driver = new IOSDriver(url, desiredCapabilities);
+String sessionId = driver.getSessionId().toString();
 	
-	Reference: https://appium.io/docs/en/commands/session/delete/index.html
+Reference:  https://appium.io/docs/en/commands/session/create/index.html
+	
+```
+
+**End Session**
+
+```java 
+
+End the running session
+driver.quit();
+	
+Reference: https://appium.io/docs/en/commands/session/delete/index.html
+	
+```
 	
 
 Get Session Capabilities
