@@ -1317,7 +1317,7 @@ Finger print
 ```
 
 
-4) Element related Commands
+# Element related Commands
 
 Find Element
 
@@ -1536,7 +1536,7 @@ Are Elements Equal
 ```
 
 
-6) Context related commands
+# Context related commands
 
 Get Current Context
 
@@ -1810,9 +1810,8 @@ Actions
 
 ```
 
---------------------------------------------------------------------------------------------------------------------------------
 
-8) Web related commands
+# Web related commands
 
 Switch to Window
 
