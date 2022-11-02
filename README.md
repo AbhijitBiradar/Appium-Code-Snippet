@@ -1815,162 +1815,254 @@ Actions
 8) Web related commands
 
 Switch to Window
+
+```java
 	Change focus to another window (Web context only)
 	driver.switchTo().window("handle");
 	
 	Reference: https://appium.io/docs/en/commands/web/window/set-window/index.html
 
+```
+
 
 Close Window
+
+```java
 	Close the current window (Web context only)
 	driver.close();
 	
 	Reference: https://appium.io/docs/en/commands/web/window/close-window/index.html
 
+```
+
 
 Get Window Handle
+
+```java
 	Retrieve the current window handle (Web context only)
 	String windowHandle = driver.getWindowHandle();
 	
 	Reference: https://appium.io/docs/en/commands/web/window/get-handle/index.html
 
+```
+
 
 Get Window Handles
+
+```java
 	Retrieve the list of all window handles available to the session (Web context only)
 	Set<String> windowHandles = driver.getWindowHandles();
 
+```
+
 
 Get Title
+
+```java
 	Get the current page title (Web context only)
 	String title = driver.getTitle();
 	
 	Reference: https://appium.io/docs/en/commands/web/window/title/index.html
 
+```
+
 
 Get Window Size
+
+```java
 	Get the size of the specified window (Web context only)
 	Dimension windowSize = driver.manage().window().getSize();
 	
 	Reference: https://appium.io/docs/en/commands/web/window/get-window-size/index.html
 
+```
+
 
 
 Set Window Size
+
+```java
 	Change the size of the specified window (Web context only)
 	driver.manage().window().setSize(new Dimension(10, 10));
 	
 	Reference: https://appium.io/docs/en/commands/web/window/set-window-size/index.html
 
+```
+
 
 Get Window Position
+
+```java
 	Get the position of the specified window (Web context only)
 	Point windowPosition = driver.manage().window().getPosition();
 	
 	Reference: https://appium.io/docs/en/commands/web/window/get-window-position/index.html
 
+```
+
 
 Set Window Position
+
+```java
 	Change the position of the specified window (Web context only)
 	driver.manage().window().setPosition(new Dimension(10, 10));
 	
 	Reference: https://appium.io/docs/en/commands/web/window/set-window-position/index.html
 
+```
+
 
 Maximize Window
+
+```java
 	Maximize the specified window (Web context only)
 	driver.manage().window().maximize();
 	
 	Reference: https://appium.io/docs/en/commands/web/window/maximize-window/index.html
 
+```
+
 
 Go to URL
+
+```java
 	Navigate to a new URL (Web context) or open an Appium deep link (Native)
 	driver.get("http://appium.io/");
 	
 	Reference: https://appium.io/docs/en/commands/web/navigation/go-to-url/index.html
 
+```
+
 
 Get URL
+
+```java
 	Retrieve the URL of the current page (Web context only)
 	String url = driver.getCurrentUrl();
 	
 	Reference: https://appium.io/docs/en/commands/web/navigation/url/index.html
 
+```
+
 
 Go Back
+
+```java
 	Navigate backwards in the browser history, if possible (Web context only)
 	driver.back();
 	
 	Reference: https://appium.io/docs/en/commands/web/navigation/back/index.html
 
+```
+
 
 Go Forward
+
+```java
 	Navigate forwards in the browser history, if possible (Web context only)
 	driver.forward();
 	
 	Reference: https://appium.io/docs/en/commands/web/navigation/forward/index.html
 
+```
+
 
 Refresh
+
+```java
 	Refresh the current page. (Web context only)
 	driver.refresh();
 	
 	Reference: https://appium.io/docs/en/commands/web/navigation/refresh/index.html
 
+```
+
 
 Get All Cookies
+
+```java
 	Retrieve all cookies visible to the current page (Web context only)
 	Set<Cookie> allcookies = driver.manage().getCookies();
 	
 	Reference: https://appium.io/docs/en/commands/web/storage/get-all-cookies/index.html
 
+```
+
 
 Set Cookie
+
+```java
 	Set a cookie (Web context only)
 	driver.manage().addCookie(new Cookie("foo", "bar"));
 	
 	Reference: https://appium.io/docs/en/commands/web/storage/set-cookie/index.html
 
+```
+
 
 Delete Cookie
+
+```java
 	Delete the cookie with the given name (Web context only)
 	driver.manage().deleteCookieNamed("cookie_name");
 	
 	Reference: https://appium.io/docs/en/commands/web/storage/delete-cookie/index.html
 
+```
+
 
 
 
 Delete All Cookies
+
+```java
 	Delete all cookies visible to current page (Web context only)
 	driver.manage().deleteAllCookies();
 	
 	Reference: https://appium.io/docs/en/commands/web/storage/delete-all-cookies/index.html
 
+```
+
 
 Switch to Frame
+
+```java
 	Change focus to another frame on the page (Web context only)
 	driver.switchTo().frame(3);
 	
 	Reference: https://appium.io/docs/en/commands/web/frame/switch/index.html
 
+```
+
 
 Switch to Parent Frame
+
+```java
 	Change focus to the parent context (Web context only)
 	driver.switchTo().parentFrame();
 
+```
+
 
 Execute Async Script
+
+```java
 	((JavascriptExecutor) driver).executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], 500);");
 	
 	Reference: https://appium.io/docs/en/commands/web/execute-async/index.html
 
+```
+
 
 Execute Script
+
+```java
 	Inject a snippet of JavaScript into the page for execution in the context of the currently selected frame (Web context). Run a native mobile command (Native Context).
 	((JavascriptExecutor) driver).executeScript("window.setTimeout(arguments[arguments.length - 1], 500);");
 	
 	Reference: https://appium.io/docs/en/commands/web/execute/index.html
+
+```
 
 
 Simple Swipe
