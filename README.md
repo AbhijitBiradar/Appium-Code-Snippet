@@ -491,84 +491,127 @@ Reference: https://appium.io/docs/en/commands/session/delete/index.html
 ```
 	
 
-Get Session Capabilities
+**Get Session Capabilities**
+
+```java 
 	Retrieve the capabilities of the specified session
 	Map<String, Object> caps = driver.getSessionDetails();
 	
 	Reference: https://appium.io/docs/en/commands/session/get/index.html
+		
+```
 	
-Go Back
+**Go Back**
+
+```java 
 	Navigate backwards in the browser history, if possible (Web context only)
 	driver.back();
 
 	Reference: https://appium.io/docs/en/commands/session/back/index.html
+		
+```
 	
-Take Screenshot
+**Take Screenshot**
+
+```java 
 	Take a screenshot of the current viewport/window/page
 	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	
 	Reference: https://appium.io/docs/en/commands/session/screenshot/index.html
+		
+```
 	
-Get Page Source
+**Get Page Source**
+
+```java 
 	Get the current application hierarchy XML (app) or page source (web)
 	String pageSource = driver.getPageSource();
 
 	Reference: https://appium.io/docs/en/commands/session/source/index.html
+		
+```
 	
-Set Timeouts
+**Set Timeouts**
+
+```java 
 	Configure the amount of time that a particular type of operation can execute for before they are aborted
 	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	
 	Reference: https://appium.io/docs/en/commands/session/timeouts/timeouts/index.html
+		
+```
 	
-Set Implicit Wait Timeout
+**Set Implicit Wait Timeout**
+
+```java 
 	Set the amount of time the driver should wait when searching for elements	
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	
 	Reference: https://appium.io/docs/en/commands/session/timeouts/implicit-wait/index.html
+		
+```
 	
-Set Script Timeout
+**Set Script Timeout**
+
+```java 
 	Set the amount of time, in milliseconds, that asynchronous scripts executed by execute async are permitted to run before they are aborted (Web context only)
 	driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
 
 	Reference: https://appium.io/docs/en/commands/session/timeouts/async-script/index.html
+	
+```
 
-Get Orientation
+**Get Orientation**
+
+```java 
 	Get the current device/browser orientation
 	ScreenOrientation orientation = driver.getOrientation();
 	
 	Reference: https://appium.io/docs/en/commands/session/orientation/get-orientation/index.html
+		
+```
 	
-Set Orientation
+**Set Orientation**
+
+```java 
 	Set the current device/browser orientation
 	driver.rotate(ScreenOrientation.LANDSCAPE);
 	
 	Reference: https://appium.io/docs/en/commands/session/orientation/set-orientation/index.html
+		
+```
 	
-Get Geolocation
+**Get Geolocation**
+
+```java 
 	Get the current geo location
 	Location location = driver.location(); // Must be a driver that implements LocationContext
 	
 	Reference: https://appium.io/docs/en/commands/session/geolocation/get-geolocation/index.html
 	
+```
+
 Set Geolocation
 	Set the current geo location
 	driver.setLocation(new Location(49, 123, 10)); // Must be a driver that implements LocationContext
 	
 	Reference: https://appium.io/docs/en/commands/session/geolocation/set-geolocation/index.html
 	
+	
 Get available log types
 	Get available log types as a list of strings
 	Set<String> logTypes = driver.manage().logs().getAvailableLogTypes();
 	
 	Reference: https://appium.io/docs/en/commands/session/logs/get-log-types/index.html
-	
+
+
 Get Logs
 	Get the log for a given log type. Log buffer is reset after each request
 	LogEntries logEntries = driver.manage().logs().get("driver");
 	
 	Reference: https://appium.io/docs/en/commands/session/logs/get-log/index.html
-	
+
+
 Log event
 	Store a custom event
 	
@@ -578,24 +621,28 @@ Log event
 	driver.logEvent(evt);
 
 	Reference: https://appium.io/docs/en/commands/session/events/log-event/index.html
-	
+
+
 Get events
 	Get events stored in appium server
 	driver.getEvents();
 
 	Reference: https://appium.io/docs/en/commands/session/events/get-events/index.html
-	
+
+
 Update Device Settings
 	Update the current setting on the device
 	driver.setSetting(Setting.WAIT_FOR_IDLE_TIMEOUT, 5000);
 	
 	Reference: https://appium.io/docs/en/commands/session/settings/update-settings/index.html
-	
+
+
 Retrieve Device Settings
 	Retrieve the current settings on the device
 	Map<String, Object> settings = driver.getSettings();
 	
 	Reference : https://appium.io/docs/en/commands/session/settings/get-settings/index.html
+
 
 Execute Driver Script
 	Run a WebdriverIO script against the current session, allowing execution of many commands in one Appium request.	
@@ -604,12 +651,14 @@ Execute Driver Script
 	driver.executeDriverScript(script, new ScriptOptions().withTimeout(200));
 	
 	Reference : https://appium.io/docs/en/commands/session/execute-driver/index.html	
-		
+
+
 Start Activity
 	Start an Android activity by providing package name and activity name
 	driver.startActivity(new Activity("com.example", "ActivityName"));
 	
 	Reference: https://appium.io/docs/en/commands/device/activity/start-activity/index.html
+
 
 Get Current Activity
 	Get the name of the current Android activity
@@ -623,7 +672,8 @@ Get Current Package
 	String package = driver.getCurrentPackage();
 	
 	Reference: https://appium.io/docs/en/commands/device/activity/current-package/index.html
-	
+
+
 Install App
 	Install the given app onto the device
 	driver.installApp("/Users/johndoe/path/to/app.apk");
