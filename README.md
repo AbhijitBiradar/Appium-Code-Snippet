@@ -592,27 +592,45 @@ Reference: https://appium.io/docs/en/commands/session/delete/index.html
 ```
 
 Set Geolocation
+
+```java 
+
 	Set the current geo location
 	driver.setLocation(new Location(49, 123, 10)); // Must be a driver that implements LocationContext
 	
 	Reference: https://appium.io/docs/en/commands/session/geolocation/set-geolocation/index.html
 	
+```
+
 	
-Get available log types
+Get available log types 
+
+```java 
+	
 	Get available log types as a list of strings
 	Set<String> logTypes = driver.manage().logs().getAvailableLogTypes();
 	
 	Reference: https://appium.io/docs/en/commands/session/logs/get-log-types/index.html
 
+```
+
 
 Get Logs
+
+```java 
+	
 	Get the log for a given log type. Log buffer is reset after each request
 	LogEntries logEntries = driver.manage().logs().get("driver");
 	
 	Reference: https://appium.io/docs/en/commands/session/logs/get-log/index.html
 
+```
+
 
 Log event
+
+```java 
+	
 	Store a custom event
 	
 	CustomEvent evt = new CustomEvent();
@@ -622,29 +640,49 @@ Log event
 
 	Reference: https://appium.io/docs/en/commands/session/events/log-event/index.html
 
+```
+
 
 Get events
+
+```java 
+	
 	Get events stored in appium server
 	driver.getEvents();
 
 	Reference: https://appium.io/docs/en/commands/session/events/get-events/index.html
 
+```
+
 
 Update Device Settings
+
+```java 
+	
 	Update the current setting on the device
 	driver.setSetting(Setting.WAIT_FOR_IDLE_TIMEOUT, 5000);
 	
 	Reference: https://appium.io/docs/en/commands/session/settings/update-settings/index.html
 
+```
+
 
 Retrieve Device Settings
+
+```java 
+	
 	Retrieve the current settings on the device
 	Map<String, Object> settings = driver.getSettings();
 	
 	Reference : https://appium.io/docs/en/commands/session/settings/get-settings/index.html
 
+```
+
 
 Execute Driver Script
+
+```java 
+	
 	Run a WebdriverIO script against the current session, allowing execution of many commands in one Appium request.	
 	String script = "const el = await driver.$('~foo');\n"
 				  + "await el.click();"
@@ -652,106 +690,178 @@ Execute Driver Script
 	
 	Reference : https://appium.io/docs/en/commands/session/execute-driver/index.html	
 
+```
+
 
 Start Activity
+
+```java 
+	
 	Start an Android activity by providing package name and activity name
 	driver.startActivity(new Activity("com.example", "ActivityName"));
 	
 	Reference: https://appium.io/docs/en/commands/device/activity/start-activity/index.html
 
+```
+
 
 Get Current Activity
+
+```java 
+	
 	Get the name of the current Android activity
 	String activity = driver.currentActivity();
 	
 	Reference: https://appium.io/docs/en/commands/device/activity/current-activity/index.html
 	
+```
+
 	
 Get Current Package
+
+```java 
+	
 	Get the name of the current Android package
 	String package = driver.getCurrentPackage();
 	
 	Reference: https://appium.io/docs/en/commands/device/activity/current-package/index.html
 
+```
+
 
 Install App
+
+```java 
+	
 	Install the given app onto the device
 	driver.installApp("/Users/johndoe/path/to/app.apk");
 	
 	Reference: https://appium.io/docs/en/commands/device/app/install-app/index.html
 
+```
+
 	
 Is App Installed
+
+```java 
+	
 	Check whether the specified app is installed on the device
 	driver.isAppInstalled("com.example.AppName");
 	
 	Reference: https://appium.io/docs/en/commands/device/app/is-app-installed/index.html
 
+```
+
 
 Launch App
+
+```java 
+	
 	Launch the app-under-test on the device
 	driver.launchApp();
 	
 	Reference: https://appium.io/docs/en/commands/device/app/launch-app/index.html
 	
+```
+
 	
 Background App
+
+```java 
+	
 	Send the currently running app for this session to the background
 	driver.runAppInBackground(Duration.ofSeconds(10));
 	
 	Reference: https://appium.io/docs/en/commands/device/app/background-app/index.html
 	
+```
+
 
 Close an App
+
+```java 
+	
 	Close an app on device
 	driver.closeApp();
 	
 	Reference: https://appium.io/docs/en/commands/device/app/close-app/index.html
 
+```
+
 	
 Reset App
+
+```java 
+	
 	Reset the currently running app for this session
 	driver.resetApp();
 	
 	Reference: https://appium.io/docs/en/commands/device/app/reset-app/index.html
 
+```
+
 	
 Remove App
+
+```java 
+	
 	Remove an app from the device
 	driver.removeApp("com.example.AppName");
 	
 	Reference: https://appium.io/docs/en/commands/device/app/remove-app/index.html
 
+```
+
 	
 Activate App
+
+```java 
+	
 	Activate the given app onto the device
 	driver.activateApp('com.apple.PReferences');
 	driver.activateApp('io.appium.android.apis');
 	
 	Reference: https://appium.io/docs/en/commands/device/app/activate-app/index.html
 
+```
+
 	
 Terminate App
+
+```java 
+	
 	Terminate the given app on the device
 	driver.terminateApp('com.apple.PReferences');
 	driver.terminateApp('io.appium.android.apis');
 	
 	Reference: https://appium.io/docs/en/commands/device/app/terminate-app/index.html
 	
+```
+
 	
 Get app state
+
+```java 
+	
 	Get the given app status on the device
 	driver.queryAppState('com.apple.PReferences');
 	driver.queryAppState('io.appium.android.apis');
 	
 	Reference: https://appium.io/docs/en/commands/device/app/app-state/index.html
 
+```
+
 	
 Get App Strings
+
+```java 
+	
 	Get app strings
 	Map<String, String> appStrings = driver.getAppStringMap("en", "/path/to/file");
 	
 	Reference: https://appium.io/docs/en/commands/device/app/get-app-strings/index.html
+
+```
 
 	
 End Test Coverage
