@@ -865,21 +865,34 @@ Get App Strings
 
 	
 End Test Coverage
+
+```java 
+	
 	Get test coverage data
 	driver.endTestCoverage("Intent", "/path");
 	
 	https://appium.io/docs/en/commands/device/app/end-test-coverage/index.html
 	
+```
+
 	
 Get Clipboard
+
+```java 
+	
 	Get the content of the system clipboard
 	driver.getClipboard(ClipboardContentType.PLAINTEXT); // get plaintext
 	driver.getClipboardText();
 	
 	Reference: https://appium.io/docs/en/commands/device/clipboard/get-clipboard/index.html
 
+```
+
 	
 Set Clipboard
+
+```java 
+	
 	Set the content of the system clipboard
 	// base64Content is Base64-encoded content
 	driver.setClipboard("label", ClipboardContentType.PLAINTEXT, base64Content);
@@ -887,248 +900,422 @@ Set Clipboard
 	
 	Reference: https://appium.io/docs/en/commands/device/clipboard/set-clipboard/index.html
 
+```
+
 	
 Emulate power state
+
+```java 
+	
 	Emulate power state change on the connected emulator.
 	driver.setPowerAC(PowerACState.OFF);
 	
 	Reference: https://appium.io/docs/en/commands/device/emulator/power_ac/index.html
 	
+```
+
 	
 Emulate power capacity
+
+```java 
+	
 	Emulate power capacity change on the connected emulator.
 	driver.setPowerCapacity(100);
 	
 	Reference: https://appium.io/docs/en/commands/device/emulator/power_capacity/index.html
+	
+```
+
+	
 Push File
+
+```java 
+	
 	Place a file onto the device in a particular place
 	driver.pushFile("/data/local/tmp/foo.bar", new File("/Users/johndoe/files/foo.bar"));
 	
 	Reference: https://appium.io/docs/en/commands/device/files/push-file/index.html
 	
+```
+
 	
 Pull File
+
+```java 
+	
 	Retrieve a file from the device's file system
 	byte[] fileBase64 = driver.pullFile("/path/to/device/foo.bar");
 	
 	Reference: https://appium.io/docs/en/commands/device/files/pull-file/index.html
 	
+```
+
 
 Pull Folder
+
+```java 
+	
 	Retrieve a folder from the device's file system
 	byte[] folder = driver.pullFolder("/path/to/device/foo.bar");
 	
 	Reference: https://appium.io/docs/en/commands/device/files/pull-folder/index.html
 	
+```
+
 
 Shake
+
+```java 
+	
 	Perform a shake action on the device
 	driver.shake();
 	
 	Reference: https://appium.io/docs/en/commands/device/interactions/shake/index.html
 
+```
+
 	
 Lock
+
+```java 
+	
 	Lock the device
 	driver.lockDevice();
 	
 	Reference: https://appium.io/docs/en/commands/device/interactions/lock/index.html
 	
+```
+
 
 Unlock
+
+```java 
+	
 	Unlock the device	
 	driver.lockDevice();
 	driver.unlockDevice();
 	
 	Reference: https://appium.io/docs/en/commands/device/interactions/unlock/index.html
 
+```
+
 
 
 Is Device Locked
+
+```java 
+	
 	Check whether the device is locked or not
 	boolean isLocked = driver.isDeviceLocked();
 	
 	Reference: https://appium.io/docs/en/commands/device/interactions/is-locked/index.html
 	
+```
+
 
 Rotate
+
+```java 
+	
 	Rotate the device in three dimensions
 	driver.rotate(new DeviceRotation(10, 10, 10));
 	
 	Reference: https://appium.io/docs/en/commands/device/interactions/rotate/index.html
 
+```
+
 	
 Press Key Code
+
+```java 
+	
 	Press a particular key on an Android Device
 	driver.pressKeyCode(AndroidKeyCode.SPACE, AndroidKeyMetastate.META_SHIFT_ON);
 	
 	Reference: https://appium.io/docs/en/commands/device/keys/press-keycode/index.html
 
+```
+
 
 Long Press Key Code
+
+```java 
+	
 	Press and hold a particular key code on an Android device
 	driver.longPressKeyCode(AndroidKeyCode.HOME);
 	
 	Reference: https://appium.io/docs/en/commands/device/keys/long-press-keycode/index.html
 
+```
+
 
 Hide Keyboard
+
+```java 
+	
 	Hide soft keyboard
 	driver.hideKeyboard();
 	
 	Reference: https://appium.io/docs/en/commands/device/keys/hide-keyboard/index.html
 
+```
+
 
 Is Keyboard Shown
+
+```java 
+	
 	Whether or not the soft keyboard is shown
 	boolean isKeyboardShown = driver.isKeyboardShown();
 	
 	Reference: https://appium.io/docs/en/commands/device/keys/is-keyboard-shown/index.html
 
+```
+
 
 
 Toggle Airplane Mode
+
+```java 
+	
 	Toggle airplane mode on device
 	driver.toggleAirplaneMode();
 	
 	Reference: https://appium.io/docs/en/commands/device/network/toggle-airplane-mode/index.html
 
+```
+
 
 Toggle Data
+
+```java 
+	
 	Switch the state of data service
 	driver.toggleData();
 	
 	Reference: https://appium.io/docs/en/commands/device/network/toggle-data/index.html
 
+```
+
 
 Toggle WiFi
+
+```java 
+	
 	Switch the state of the WiFi service
 	driver.toggleWifi();
 	
 	Reference: https://appium.io/docs/en/commands/device/network/toggle-wifi/index.html
 
+```
+
 Toggle Location Services
+
+```java 
+	
 	Switch the state of the location service
 	driver.toggleLocationServices();
 	
 	Reference: https://appium.io/docs/en/commands/device/network/toggle-location-services/index.html
 
+```
+
 
 Send SMS
+
+```java 
+	
 	Simulate an SMS message (Emulator only)
 	driver.sendSMS("555-123-4567", "Hey lol");
 	
 	Reference: https://appium.io/docs/en/commands/device/network/send-sms/index.html
 
+```
+
 
 GSM Call
+
+```java 
+	
 	Make GSM call (Emulator only)
 	driver.makeGsmCall("5551234567", GsmCallActions.CALL);
 	
 	Reference: https://appium.io/docs/en/commands/device/network/gsm-call/index.html
 
+```
+
 
 
 GSM Signal
+
+```java 
+	
 	Set GSM signal strength (Emulator only)
 	driver.setGsmSignalStrength(GsmSignalStrength.GOOD);
 	
 	Reference: https://appium.io/docs/en/commands/device/network/gsm-signal/index.html
 
+```
+
 
 GSM Voice
+
+```java 
+	
 	Set GSM voice state (Emulator only)
 	driver.setGsmVoice(GsmVoiceState.HOME);
 	
 	Reference: https://appium.io/docs/en/commands/device/network/gsm-voice/index.html
 
+```
+
 
 Network speed
+
+```java 
+	
 	Set network speed (Emulator only)
 	driver.setNetworkSpeed(NetworkSpeed.LTE);
 	
 	Reference: https://appium.io/docs/en/commands/device/network/network-speed/index.html
 
+```
+
 
 Get Performance Data
+
+```java 
+	
 	Returns the information of the system state which is supported to read as like cpu, memory, network traffic, and battery
 	List<List<Object>> performanceData = driver.getPerformanceData("my.app.package", "cpuinfo", 5);
 	
 	Reference: https://appium.io/docs/en/commands/device/performance-data/get-performance-data/index.html
 
+```
+
 
 Get Performance Data Types
+
+```java 
+	
 	Returns the information types of the system state which is supported to read as like cpu, memory, network traffic, and battery
 	List<String> performanceTypes = driver.getSupportedPerformanceDataTypes();
 	
 	Reference: https://appium.io/docs/en/commands/device/performance-data/performance-data-types/index.html
 
+```
+
 
 Start Recording Screen
+
+```java 
+	
 	Start recording screen
 	driver.startRecordingScreen();
 	driver.startRecordingScreen(new BaseStartScreenRecordingOptions(....));
 	
 	Reference: https://appium.io/docs/en/commands/device/recording-screen/start-recording-screen/index.html
 
+```
+
 
 Stop Recording Screen
+
+```java 
+	
 	Stop recording screen
 	driver.stopRecordingScreen();
 	driver.stopRecordingScreen(new BaseStopScreenRecordingOptions(....));
 	
 	Reference: https://appium.io/docs/en/commands/device/recording-screen/stop-recording-screen/index.html
 
+```
+
 
 Perform Touch ID
+
+```java 
+	
 	Simulate a touch id event (iOS Simulator only)
 	driver.performTouchID(false); // Simulates a failed touch
 	driver.performTouchID(true); // Simulates a passing touch
 	
 	Reference: https://appium.io/docs/en/commands/device/simulator/touch-id/index.html
 
+```
+
 
 Toggle Touch ID Enrollment
+
+```java 
+	
 	Toggle the simulator being enrolled to accept touchId (iOS Simulator only)
 	driver.toggleTouchIDEnrollment(true);
 	
 	Reference: https://appium.io/docs/en/commands/device/simulator/toggle-touch-id-enrollment/index.html
 
+```
+
 
 Open Notifications
+
+```java 
+	
 	Open Android notifications (Emulator only)
 	driver.openNotifications();
 	
 	Reference: https://appium.io/docs/en/commands/device/system/open-notifications/index.html
 
+```
+
 
 Get System Bars
+
+```java 
+	
 	Retrieve visibility and bounds information of the status and navigation bars
 	Map<String, String> systemBars = driver.getSystemBars();
 	
 	Reference: https://appium.io/docs/en/commands/device/system/system-bars/index.html
 
+```
+
 
 Get System Time
+
+```java 
+	
 	Get the time on the device
 	String time = driver.getDeviceTime();
 	
 	Reference: https://appium.io/docs/en/commands/device/system/system-time/index.html
 
+```
+
 
 Get Display Density
+
+```java 
+	
 	Retrieve display density(dpi) of the Android device
 	driver.getDeviceDensity();
 	
 	Reference: https://appium.io/docs/en/commands/device/system/display-density/index.html
 
+```
+
 
 Finger print
+
+```java 
+	
 	Authenticate users by using their finger print scans on supported emulators.
 	driver.fingerPrint(1);
 	
 	Reference: https://appium.io/docs/en/commands/device/authentication/finger-print/index.html
  
+```
+
 
 4) Element related Commands
 
