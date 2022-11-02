@@ -1320,141 +1320,211 @@ Finger print
 4) Element related Commands
 
 Find Element
+
+```java 
 	Search for an element on the page
 	MobileElement elementOne = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 	MobileElement elementTwo = (MobileElement) driver.findElementByClassName("SomeClassName");
 	
 	Reference: https://appium.io/docs/en/commands/element/find-element/index.html
 
+```
+
 
 Find Elements
+
+```java 
 	Search for multiple elements
 	List<MobileElement> elementsOne = (List<MobileElement>) driver.findElementsByAccessibilityId("SomeAccessibilityID");
 	List<MobileElement> elementsTwo = (List<MobileElement>) driver.findElementsByClassName("SomeClassName");
 	
 	Reference: https://appium.io/docs/en/commands/element/find-elements/index.html
 
+```
+
 
 Click
+
+```java 
 	Click element at its center point.
 	MobileElement el = driver.findElementByAccessibilityId("SomeId");
 	el.click();
 	
 	Reference: https://appium.io/docs/en/commands/element/actions/click/index.html
 
+```
+
 
 Send Keys
+
+```java 
 	Send a sequence of key strokes to an element
 	MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 	element.sendKeys("Hello world!");
 	
 	Reference: https://appium.io/docs/en/commands/element/actions/send-keys/index.html
 
+```
+
 
 Clear Element
+
+```java 
 	Clear an element's value
 	MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 	element.clear();
 	
 	https://appium.io/docs/en/commands/element/actions/clear/index.html
 
+```
+
 
 Get Element Text
+
+```java 
 	Returns visible text for element
 	MobileElement element = (MobileElement) driver.findElementByClassName("SomeClassName");
 	String elText = element.getText();
 	
 	Reference: https://appium.io/docs/en/commands/element/attributes/text/index.html
 
+```
+
 
 Get Tag Name
+
+```java 
 	Get an element's tag name
 	MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 	String tagName = element.getTagName();
 	
 	Reference: https://appium.io/docs/en/commands/element/attributes/name/index.html
 
+```
+
 
 Get Element Attribute
+
+```java 
 	Get the value of an element's attribute
 	MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 	String tagName = element.getAttribute("content-desc");
 	
 	Reference: https://appium.io/docs/en/commands/element/attributes/attribute/index.html
 
+```
+
 
 Is Element Selected
+
+```java 
 	Determine if a form or form-like element (checkbox, select, etc...) is selected
 	MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 	boolean isSelected = element.isSelected();
 	
 	Reference: https://appium.io/docs/en/commands/element/attributes/selected/index.html
 
+```
+
 
 Is Element Enabled
+
+```java 
 	Determine if an element is currently enabled
 	MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 	boolean isEnabled = element.isEnabled();
 	
 	Reference: https://appium.io/docs/en/commands/element/attributes/enabled/index.html
 
+```
+
 
 Is Element Displayed
+
+```java 
 	Determine if an element is currently displayed
 	MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 	boolean isDisplayed = element.isDisplayed();
 	
 	Reference: https://appium.io/docs/en/commands/element/attributes/displayed/index.html
 
+```
+
 
 Get Element Location
+
+```java 
 	Determine an element's location on the page or screen
 	MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 	Point location = element.getLocation();
 	
 	Reference: https://appium.io/docs/en/commands/element/attributes/location/index.html
 
+```
+
 Get Element Size
+
+```java 
 	Determine an element's size in pixels
 	MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 	Dimension elementSize = element.getSize();
 	
 	Reference: https://appium.io/docs/en/commands/element/attributes/size/index.html
 
+```
+
 
 Get Element Rect
+
+```java 
 	Gets dimensions and coordinates of an element
 	MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 	Rectangle rect = element.getRect();
 	
 	Reference: https://appium.io/docs/en/commands/element/attributes/rect/index.html
 
+```
+
 
 Get Element CSS Value
+
+```java 
 	Query the value of a web element's computed CSS property
 	MobileElement element = (MobileElement) driver.findElementById("SomeId");
 	String cssProperty = element.getCssValue("style");
 	
 	Reference: https://appium.io/docs/en/commands/element/attributes/css-property/index.html
 
+```
+
 
 Submit Form
+
+```java 
 	Submit a FORM element
 	MobileElement element = (MobileElement) driver.findElementByClassName("SomeClassName");
 	element.submit();
 	
 	Reference: https://appium.io/docs/en/commands/element/other/submit/index.html
 
+```
+
 
 Get Active Element
+
+```java 
 	Gets the active element of the current session
 	WebElement currentElement = driver.switchTo().activeElement();
 	
 	Reference: https://appium.io/docs/en/commands/element/other/active/index.html
 
+```
+
 
 
 Are Elements Equal
+
+```java 
 	Test if two element IDs refer to the same element
 	// Overrides the Java Object .equals method
 	MobileElement elementOne = (MobileElement) driver.findElementByClassName("SomeClassName");
@@ -1463,23 +1533,35 @@ Are Elements Equal
 	
 	Reference: https://appium.io/docs/en/commands/element/other/equals-element/index.html
  
+```
+
 
 6) Context related commands
 
 Get Current Context
+
+```java 
 	Get the current context in which Appium is running
 	String context = driver.getContext();
 	
 	Reference: https://appium.io/docs/en/commands/context/get-context/index.html
 
+```
+
 Get All Contexts
+
+```java 
 	Get all the contexts available to automate
 	Set<String> contextNames = driver.getContextHandles();
 	
 	Reference: https://appium.io/docs/en/commands/context/get-contexts/index.html
 
+```
+
 
 Set Current Context
+
+```java 
 	Set the context being automated
 	Set<String> contextNames = driver.getContextHandles();
 	driver.context(contextNames.toArray()[1]);
@@ -1488,15 +1570,25 @@ Set Current Context
 
 	Reference: https://appium.io/docs/en/commands/context/set-context/index.html
 
+```
+
 
 Move Mouse To
+
+```java 
 	Move the mouse by an offset of the specificed element
 	Actions action = new Actions(driver);
 	action.moveTo(element, 10, 10);
 	action.perform();
 	
 	Reference: https://appium.io/docs/en/commands/interactions/mouse/moveto/index.html
+	
+```
+
+	
 Click
+
+```java 
 	Click any mouse button at the current mouse coordinates
 	Actions action = new Actions(driver);
 	action.moveTo(element);
@@ -1505,8 +1597,12 @@ Click
 	
 	Reference: https://appium.io/docs/en/commands/interactions/mouse/click/index.html
 
+```
+
 
 Double Click
+
+```java 
 	Double-clicks at the current mouse coordinates (set by moveto).
 	Actions action = new Actions(driver);
 	action.moveTo(element);
@@ -1515,8 +1611,12 @@ Double Click
 	
 	Reference: https://appium.io/docs/en/commands/interactions/mouse/doubleclick/index.html
 
+```
+
 
 Button Down
+
+```java 
 	Click and hold the left mouse button at the current mouse coordinates
 	Actions action = new Actions(driver);
 	action.moveTo(element);
@@ -1525,8 +1625,12 @@ Button Down
 	
 	Reference: https://appium.io/docs/en/commands/interactions/mouse/button-down/index.html
 
+```
+
 
 Button Up
+
+```java 
 	Releases the mouse button previously held
 	Actions action = new Actions(driver);
 	action.moveTo(element);
@@ -1537,9 +1641,13 @@ Button Up
 	
 	Reference: https://appium.io/docs/en/commands/interactions/mouse/button-up/index.html
 
+```
+
 
 
 Tap
+
+```java 
 	Single tap on the touch enabled device
 	TouchActions action = new TouchActions(driver);
 	action.singleTap(element);
@@ -1547,7 +1655,11 @@ Tap
 	
 	Reference: https://appium.io/docs/en/commands/interactions/touch/tap/index.html
 
+```
+
 Double Tap
+
+```java 
 	Double tap on the touch screen using finger motion events
 	TouchActions action = new TouchActions(driver);
 	action.doubleTap(element);
@@ -1555,8 +1667,12 @@ Double Tap
 	
 	Reference: https://appium.io/docs/en/commands/interactions/touch/double-tap/index.html
 
+```
+
 
 Move To
+
+```java 
 	Finger move on the screen
 	TouchActions action = new TouchActions(driver);
 	action.down(10, 10);
@@ -1565,8 +1681,12 @@ Move To
 	
 	Reference: https://appium.io/docs/en/commands/interactions/touch/move/index.html
 
+```
+
 
 Touch Down
+
+```java 
 	Finger down on the screen
 	TouchActions action = new TouchActions(driver);
 	action.down(10, 10);
@@ -1575,8 +1695,12 @@ Touch Down
 
 	Reference: https://appium.io/docs/en/commands/interactions/touch/touch-down/index.html
 
+```
+
 
 Touch Up
+
+```java 
 	Finger up on the screen
 	TouchActions action = new TouchActions(driver);
 	action.down(10, 10);
@@ -1585,8 +1709,12 @@ Touch Up
 	
 	Reference: https://appium.io/docs/en/commands/interactions/touch/touch-up/index.html
 
+```
+
 
 Long Tap
+
+```java 
 	Long press on the touch screen using finger motion events
 	TouchActions action = new TouchActions(driver);
 	action.longPress(element);
@@ -1594,8 +1722,12 @@ Long Tap
 	
 	Reference: https://appium.io/docs/en/commands/interactions/touch/long-press/index.html
 
+```
+
 
 Scroll
+
+```java 
 	Scroll on the touch screen using finger based motion events
 	TouchActions action = new TouchActions(driver);
 	action.scroll(element, 10, 100);
@@ -1603,7 +1735,11 @@ Scroll
 	
 	Reference: https://appium.io/docs/en/commands/interactions/touch/scroll/index.html
 
+```
+
 Flick
+
+```java 
 	Flick on the touch screen using finger motion events
 	TouchActions action = new TouchActions(driver);
 	action.flick(element, 1, 10, 10);
@@ -1611,8 +1747,12 @@ Flick
 	
 	Reference: https://appium.io/docs/en/commands/interactions/touch/flick/index.html
 
+```
+
 
 Multi Touch Perform
+
+```java 
 	Perform a multi touch action sequence
 	TouchActions actionOne = new TouchAction();
 	actionOne.press(10, 10);
@@ -1629,8 +1769,12 @@ Multi Touch Perform
 	
 	Reference: https://appium.io/docs/en/commands/interactions/touch/multi-touch-perform/index.html
 
+```
+
 
 Touch Perform
+
+```java 
 	Perform a touch action sequence
 	TouchAction action = new TouchAction(driver);
 	action.press(10, 10);
@@ -1640,8 +1784,12 @@ Touch Perform
 	
 	Reference: https://appium.io/docs/en/commands/interactions/touch/touch-perform/index.html
 
+```
+
 
 Actions
+
+```java 
 	Perform a chain or multiple chains of keyboard and pointer (touch, mouse, stylus) actions
 	WebElement source = (MobileElement) driver.findElementsByAccessibilityId("SomeAccessibilityID");
 	WebElement target = (MobileElement) driver.findElementsByAccessibilityId("SomeOtherAccessibilityID");
@@ -1659,6 +1807,8 @@ Actions
 	driver.perform(Arrays.asList(dragNDrop));
 	
 	Reference: https://appium.io/docs/en/commands/interactions/actions/index.html
+
+```
 
 --------------------------------------------------------------------------------------------------------------------------------
 
